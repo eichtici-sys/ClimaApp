@@ -132,13 +132,13 @@ const Resultado = () => {
       <h4>Ciudad de {name}</h4>
       <div className="flex">
         <img
-          src={`src/assets/animated/${icono}`}
+          src={`assets/${icono}`}
           alt="imagen"
           className="tiempoImg"
         />
         <div className="info">
           <p className="temperatura">{parseInt(temperatura.temp - kelvin)} </p>
-          <img src={`src/assets/animated/celsius.svg`} alt="logo celsius" />
+          <img src={logo} alt="logo celsius" />
         </div>
       </div>
       <div className="info">
