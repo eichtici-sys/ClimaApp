@@ -132,13 +132,13 @@ const Resultado = () => {
       <h4>Ciudad de {name}</h4>
       <div className="flex">
         <img
-          src={`/assets/animated/${icono}`}
+          src={`src/assets/animated/${icono}`}
           alt="imagen"
           className="tiempoImg"
         />
         <div className="info">
           <p className="temperatura">{parseInt(temperatura.temp - kelvin)} </p>
-          <img src={`/src/assets/animated/celsius.svg`} alt="logo celsius" />
+          <img src={`src/assets/animated/celsius.svg`} alt="logo celsius" />
         </div>
       </div>
       <div className="info">
@@ -147,7 +147,7 @@ const Resultado = () => {
             Temp. Mín: <span>{parseInt(temperatura.temp_min - kelvin)}</span>{" "}
           </p>
           <img
-            src={`/src/assets/animated/celsius.svg`}
+            src={`src/assets/animated/celsius.svg`}
             alt="logo celsius"
             className="celinfo"
           />
