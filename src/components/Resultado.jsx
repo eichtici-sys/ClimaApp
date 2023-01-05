@@ -132,7 +132,7 @@ const Resultado = () => {
       <h4>Ciudad de {name}</h4>
       <div className="flex">
         <img
-          src={`/src/assets/animated/${icono}`}
+          src={`/assets/animated/${icono}`}
           alt="imagen"
           className="tiempoImg"
         />
