@@ -138,7 +138,7 @@ const Resultado = () => {
         />
         <div className="info">
           <p className="temperatura">{parseInt(temperatura.temp - kelvin)} </p>
-          <img src={logo} alt="logo celsius" />
+          <img src={Celcius} alt="logo celsius" />
         </div>
       </div>
       <div className="info">
