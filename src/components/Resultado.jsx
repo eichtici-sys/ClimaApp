@@ -1,6 +1,30 @@
 import useClima from "../hooks/useClima";
 import Celcius from "../assets/animated/celsius.svg";
 import FogNight from "../assets/animated/fog-night.svg"
+import FogDay from "../assets/animated/fog-day.svg"
+import ClearDay from "../assets/animated/clear-day.svg"
+import ClearNight from "../assets/animated/clear-night.svg"
+import Clouds1 from "../assets/animated/partly-cloudy-night.svg"
+import Clouds2 from "../assets/animated/cloudy.svg"
+import Clouds3 from "../assets/animated/overcast-night.svg"
+import Clouds4 from "../assets/animated/partly-cloudy-day.svg"
+import Clouds5 from "../assets/animated/overcast-day.svg"
+import Rain1 from "../assets/animated/partly-cloudy-night-rain.svg"
+import Rain2 from "../assets/animated/rain.svg"
+import Rain3 from "../assets/animated/overcast-night-rain.svg"
+import Rain4 from "../assets/animated/extreme-night-rain.svg"
+import Rain5 from "../assets/animated/sleet.svg"
+import Rain6 from "../assets/animated/partly-cloudy-day-rain.svg"
+import Rain7 from "../assets/animated/overcast-day-rain.svg"
+import Rain8 from "../assets/animated/extreme-day-rain.svg"
+import Rain9 from "../assets/animated/extreme-sleet.svg"
+import Rain10 from "../assets/animated/extreme-rain.svg"
+import Mist from "../assets/animated/mist.svg"
+import Smoke1 from "../assets/animated/partly-cloudy-night-smoke.svg"
+import Smoke2 from "../assets/animated/partly-cloudy-day-smoke.svg"
+import Haze from "../assets/animated/haze.svg"
+import Dust1 from "../assets/animated/dust-night.svg"
+import Dust2 from "../assets/animated/dust-day.svg"
 
 const Resultado = () => {
   const { resultado } = useClima();
@@ -13,9 +37,11 @@ const Resultado = () => {
     switch (main) {
       case "Clear":
         if (icon.includes("n")) {
-          return "clear-night.svg";
+          icono = ClearNight
+          return icono;
         } else {
-          return "clear-day.svg";
+          icono = ClearDay
+          return icono;
         }
         break;
       case "Clouds":
@@ -24,73 +50,97 @@ const Resultado = () => {
             description == "few clouds" ||
             description == "scattered clouds"
           ) {
-            return "partly-cloudy-night.svg";
+            icono = Clouds1
+            return icono;            
           } else if (description == "broken clouds") {
-            return "cloudy.svg";
+            icono = Clouds2
+            return icono;
           } else if (description == "overcast clouds") {
-            return "overcast-night.svg";
+            icono = Clouds3
+            return icono;
           }
         } else {
           if (
             description == "few clouds" ||
             description == "scattered clouds"
           ) {
-            return "partly-cloudy-day.svg";
+            icono = Clouds4
+            return icono;
           } else if (description == "broken clouds") {
-            return "cloudy.svg";
+            icono = Clouds2
+            return icono;
           } else if (description == "overcast clouds") {
-            return "overcast-day.svg";
+            icono = Clouds5
+            return icono;
           }
         }
         break;
       case "Rain":
         if (icon.includes("n")) {
           if (description == "light rain" || description == "moderate rain") {
-            return "partly-cloudy-night-rain.svg";
+            icono = Rain1
+            return icono;
           } else if (description == "heavy intensity rain") {
-            return "rain.svg";
+            icono = Rain2
+            return icono;
           } else if (description == "very heavy rain") {
-            return "overcast-night-rain.svg";
+            icono = Rain3
+            return icono;
           } else if (description == "extreme rain") {
-            return "extreme-night-rain.svg";
+            icono = Rain4
+            return icono;
           } else if (description == "freezing rain") {
-            return "sleet.svg";
+            icono = Rain5
+            return icono;
           } else {
-            return "extreme-rain.svg";
+            icono = Rain10
+            return icono;
           }
         } else {
           if (description == "light rain" || description == "moderate rain") {
-            return "partly-cloudy-day-rain.svg";
+            icono = Rain6
+            return icono;
           } else if (description == "heavy intensity rain") {
-            return "rain.svg";
+            icono = Rain2
+            return icono;
           } else if (description == "very heavy rain") {
-            return "overcast-day-rain.svg";
+            icono = Rain7
+            return icono;
           } else if (description == "extreme rain") {
-            return "extreme-day-rain.svg";
+            icono = Rain8
+            return icono;
           } else if (description == "freezing rain") {
-            return "extreme-sleet.svg";
+            icono = Rain9
+            return icono;
           } else {
-            return "extreme-rain.svg";
+            icono = Rain10
+            return icono;
           }
         }
         break;
       case "Mist":
-        return "mist.svg";
+        icono = Mist
+        return icono;
         break;
       case "Smoke":
         if (icon.includes("n")) {
-          return "partly-cloudy-night-smoke.svg";
+          icono = Smoke1
+          return icono;
         } else {
-          return "partly-cloudy-day-smoke.svg";
+          icono = Smoke2
+          return icono;
         }
       case "Haze":
-        return "haze.svg";
+        icono = Haze
+          return icono;
         break;
       case "Dust":
         if (icon.includes("n")) {
-          return "dust-night.svg";
+          icono = Dust1
+          return icono;
         } else {
-          return "dust-day.svg";
+          icono = Dust2
+          return icono;
         }
         break;
       case "Fog":
@@ -98,7 +148,8 @@ const Resultado = () => {
           icono = FogNight
           return icono
         } else {
-          return "fog-day.svg";
+          icono = FogDay
+          return icono
         }
       case "Sand":
         if (icon.includes("n")) {
