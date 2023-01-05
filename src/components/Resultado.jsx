@@ -125,14 +125,12 @@ const Resultado = () => {
   };
   const icono = obtenerIcono(clima);
 
-  console.log(icono);
-
   return (
     <div className="contenedor result">
       <h4>Ciudad de {name}</h4>
       <div className="flex">
         <img
-          src={`assets/${icono}`}
+          src={`src\assets\animated\${icono}`}
           alt="imagen"
           className="tiempoImg"
         />
