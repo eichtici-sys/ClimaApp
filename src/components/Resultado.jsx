@@ -147,7 +147,7 @@ const Resultado = () => {
             Temp. Mín: <span>{parseInt(temperatura.temp_min - kelvin)}</span>{" "}
           </p>
           <img
-            src={`src/assets/animated/celsius.svg`}
+            src={Celcius}
             alt="logo celsius"
             className="celinfo"
           />
@@ -157,7 +157,7 @@ const Resultado = () => {
             Temp. Máx.: <span>{parseInt(temperatura.temp_max - kelvin)}</span>{" "}
           </p>
           <img
-            src={`/src/assets/animated/celsius.svg`}
+            src={Celcius}
             alt="logo celsius"
             className="celinfo"
           />
