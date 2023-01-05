@@ -1,5 +1,6 @@
 import useClima from "../hooks/useClima";
 import Celcius from "../assets/animated/celsius.svg";
+import FogNight from "../assets/animated/fog-night.svg"
 
 const Resultado = () => {
   const { resultado } = useClima();
@@ -8,7 +9,7 @@ const Resultado = () => {
 
   const obtenerIcono = (clima) => {
     const { description, main, icon } = clima[0];    
-
+    let icono;
     switch (main) {
       case "Clear":
         if (icon.includes("n")) {
@@ -94,7 +95,8 @@ const Resultado = () => {
         break;
       case "Fog":
         if (icon.includes("n")) {
-          return "fog-night.svg";
+          icono = FogNight
+          return icono
         } else {
           return "fog-day.svg";
         }
@@ -130,7 +132,7 @@ const Resultado = () => {
       <h4>Ciudad de {name}</h4>
       <div className="flex">
         <img
-          src={`src\assets\animated\${icono}`}
+          src={icono}
           alt="imagen"
           className="tiempoImg"
         />
