@@ -57,6 +57,9 @@ form {
   border-radius: 1rem;
   padding: .5rem;
 }
+.campo select option{
+  max-width: 300px;
+}
 
  input[type="submit"] {
   background-color: #0ea5e9;
