@@ -38,7 +38,7 @@ function Formulario() {
         <div className="campo">
           <label htmlFor="pais">Pais</label>
           <select name="pais" id="pais" onChange={datosBusqueda} value={pais}>
-            <option value="">-- Seleccione un país --</option>
+            <option value="" style={{max-width: 300px;}}>-- Seleccione un país --</option>
             {
               paises.map((item)=>
               (
