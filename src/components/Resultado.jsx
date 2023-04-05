@@ -27,7 +27,7 @@ import Dust1 from "../assets/animated/dust-night.svg";
 import Dust2 from "../assets/animated/dust-day.svg";
 import Squall from "../assets/animated/wind.svg";
 import Tornado from "../assets/animated/tornado.svg";
-import Thunderstorm from "../assets/animated/thunderstorm.svg";
+import Thunderstorm from "../assets/animated/thunderstorms.svg";
 import Drizzle from "../assets/animated/drizzle.svg";
 import Snow from "../assets/animated/snow.svg";
 
